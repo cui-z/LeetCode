@@ -42,7 +42,7 @@ def slove(s):
 
     for r in range(1,len(s)):
         for l in range(r):
-            if s[l] == s[r] and(r -l <=2 or dp[l+1][r-2]):
+            if s[l] == s[r] and(r -l <=2 or dp[l+1][r-1]):
                 dp[l][r] = True
                 cur_len = r-l+1
                 if cur_len > long:
@@ -51,4 +51,4 @@ def slove(s):
     print(dp)
     return res
 
-print(slove("cbbd"))
+print(slove("aaaaa"))

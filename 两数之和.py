@@ -1,4 +1,4 @@
-#返回索引值
+#返回索引值  利用字典比较巧妙
 def solve(nums,target):
     res={}
     for i  in range(len(nums)):

@@ -8,12 +8,16 @@ def slove(matrix):
     while len(matrix) >0:
         result += matrix[0]
         del  matrix[0]
+        print(*matrix)
         matrix = list(zip(*matrix))
+        print(matrix)
         matrix.reverse()
+        print(matrix)
     return result
 
 print(slove([
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
+    [1,2,3,6],
+    [4,5,6,7],
+    [7,8,9,9],
+    [6,7,5,2]
 ]))

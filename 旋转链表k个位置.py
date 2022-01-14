@@ -15,12 +15,17 @@ def slove(head,k):
     k%=long
     if k ==0:
         return  head
-    slow = fast = head
+    p = head
+    while(k>0):
+        p = p.next
+        k-=1
 
+    slow = head
+    fast = p
     while fast.next:
         slow = slow.next
-        fast = fast.next
+        fast =fast.next
     new_head = slow.next
-    slow.next = None
     fast.next = head
-    return  new_head
+    slow.next = None
+    return new_head

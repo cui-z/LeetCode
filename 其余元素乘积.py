@@ -1,6 +1,7 @@
 #给一个长度为n的整数数组nums，返回输出数组output,其中output[i] = nums中除了nums[i]之外其余各元素的乘积
-# 不能使用乘法  复杂度为n
+# 不能使用chu法  复杂度为n
 
+# 从左到右 乘一边  然后从右到左乘一遍 然后想乘
 
 def slove(nums):
     #result=[1]*len(nums)
@@ -8,6 +9,8 @@ def slove(nums):
     for i in range(1,len(nums)):
         res = res1[-1]*nums[i-1]
         res1.append(res)
+
+    print(res1)
     res=1
     for j in range(len(nums)-1,-1,-1):
         if j == (len(nums)-1):

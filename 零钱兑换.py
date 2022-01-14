@@ -6,9 +6,11 @@
 #float('inf')  无穷大
 def slove(coins,target):
     result=[float('inf')]*(target+1)
-
-    for t in target:
+    result[0] = 0
+    for t in range(1,target+1):
         for c in coins:
-            if t>c:
+            if t>=c:
                 result[t] = min(result[t-c]+1,result[t])
     return  result[-1] if result[-1] != float('inf') else -1
+
+print(slove([1,3,5],8))

@@ -19,11 +19,12 @@
 
 def slove(nums):
     result=[]
-    def dfs(nums,result,path,start):
-        result.append(path)
+    def dfs(nums,path,start):
+        if path:
+            result.append(path)
         for i in range(start,len(nums)):
-            dfs(nums,result,path+[nums[i]],i+1)
-    dfs(nums,result,[],0)
+            dfs(nums,path+[nums[i]],i+1)
+    dfs(nums,[],0)
     return  result
 
 print(slove([1,2,3]))

@@ -9,10 +9,7 @@
 2，2,3
 '''
 
-
 #只需要满足两个短边之和大于第三边就可
-
-
 def slove(nums):
     num = 0
     nums.sort()
