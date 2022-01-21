@@ -27,3 +27,25 @@ def  slove(lists):
     return result
 
 print(slove([[4,8,10],[100,200,300,370],[5,8,100,2000]]))
+
+# list 也可以pop第一位元素  pop(0)
+"""
+import heapq
+def  slove(nums):
+    res =[]
+    
+    for k,v in enumerate(nums):
+        res.append((v.pop(0),k))
+    heapq.heapify(res)
+    
+    result =[]
+    
+    while res:
+        v = heapq.heappop(res)
+        result.append(v[0])
+        if nums[v[1]]:
+            heapq.heappush(res,(nums[v[1]].pop(0),v[1]))
+    return result
+
+print(slove([[4,8,10],[100,200,300,370],[5,8,100,2000]]))
+"""

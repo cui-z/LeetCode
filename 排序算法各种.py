@@ -74,3 +74,33 @@ def slove(nums,first,last):
 l = [2,4,1,2,5,8,3]
 slove(l,0,len(l)-1)
 print(l)
+
+"""
+归并排序。
+
+归并排序的核心思想是分治法，将已有序的子序列合并，得到完全有序的序列。基本过程：假设初始序列含有n个记录，则可以
+看成是n个有序的子序列，每个子序列的长度为1，然后两两归并，得到n/2个长度为2或1的有序子序列，再两两归并，最终得到
+一个长度为n的有序序列为止，这称为2路归并排序。
+
+复杂度 nlogn
+
+"""
+def merge_sort(arr):
+    if len(arr)==1:
+        return arr
+    mid = len(arr)//2
+    left = arr[:mid]
+    right = arr[mid:]
+    return marge_sort(merge_sort(left),merge_sort(right))
+def marge_sort(left,right):
+    result = []
+    while len(left)>0 and len(right)>0:
+        if left[0] < right[0]:
+            result.append(left.pop(0))
+        else:
+            result.append(right.pop(0))
+    result+=left
+    result+=right
+    return result
+arr = [2,36,32,54,89,98,65,12,74]
+print(merge_sort(arr))
