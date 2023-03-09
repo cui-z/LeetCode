@@ -22,7 +22,7 @@ def slove(nums):
                 r-=1
             else:
                 l+=1
-    return  num
+    return num
 
 print(slove([2,3,2,4]))
 

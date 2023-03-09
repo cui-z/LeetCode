@@ -4,7 +4,7 @@
 
 def slove(nums,target):
     l=0
-    r = len(nums)
+    r = len(nums)-1
 
     while l <= r:
         mid = l+(r-l)//2

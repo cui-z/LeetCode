@@ -6,17 +6,17 @@ i,都有一个胃口值gi,这是能让孩子满足胃口的饼干的最小尺寸
 例 【1,2,3】 【1,1】
 只能满足一个孩子
 '''
-
+#g胃口  s饼干
+#思路 贪心思路  饼干和胃口先排序，大饼干应该优先满足大胃口，逆序从大饼干开始跟大胃口比较
 def slove(g_list,s_list):
     g_list.sort()
     s_list.sort()
+    #饼干下biao
+    s_index=len(s_list)-1
     num=0
-    for s in s_list:
-        for g in g_list:
-            if s >=g:
-                num+=1
-                g_list.remove(g)
-
-    return num
-
+    for index in range(len(g_list)-1,-1,-1):
+        if (s_index >=0) and (s_list[s_index] >= g_list[index]):
+            s_index-=1
+            num+=1
+    return  num
 print(slove([1,2,3],[1,4]))

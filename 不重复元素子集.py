@@ -25,6 +25,6 @@ def slove(nums):
         for i in range(start,len(nums)):
             dfs(nums,path+[nums[i]],i+1)
     dfs(nums,[],0)
-    return  result
+    return result
 
 print(slove([1,2,3]))

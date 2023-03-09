@@ -13,11 +13,11 @@ def slove(nums):
                 cnt +=1
                 i+=1
             elif cnt ==2:
-                nums.remove(nums[i])
+                nums.remove(nums[i])  #删除第一个  意义一样的
                 length-=1
                 cnt-=1
         else:
             i+=1
     return length
 
-print(slove([0,0,1,1,1,1,2,3,3]))
+print(slove([0,0,1,1,1,1,2,2,2,3,3]))

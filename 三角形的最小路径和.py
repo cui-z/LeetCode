@@ -10,7 +10,9 @@
 ]
 
 2 3 5 1  =11
+
 '''
+
 
 def slove(nums):
     dp = [[0 for _ in range(i)] for i in range(1,len(nums)+1)]
