@@ -29,6 +29,8 @@ def median(A, B):
     while imin <= imax:
         i = (imin + imax) // 2
         j = half_len - i
+        print(j)
+        print("----")
         if i != m and B[j-1] > A[i]:
             # i 的值太小， 增加它
             imin = i + 1
@@ -51,4 +53,4 @@ def median(A, B):
 
             return (max_of_left + min_of_right) / 2.0
 
-print(median([1,3],[2]))
+print(median([1,3],[2,5,8,9]))

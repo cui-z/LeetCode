@@ -4,7 +4,7 @@
 '''
 
 
-def slove(nums):
+def slove1(nums):
 
     dp=[0 for _ in range(len(nums))]
     min_num=nums[0]
@@ -16,4 +16,17 @@ def slove(nums):
 
     return dp[-1]
 
+def slove(nums):
+
+    result=0
+    min_num=nums[0]
+    for i in range(1,len(nums)):
+        if nums[i] > min_num:
+            result= max(nums[i]-min_num,result)
+        else:
+            min_num = nums[i]
+
+    return result
+
+print(slove1([7,1,5,3,6,4]))
 print(slove([7,1,5,3,6,4]))

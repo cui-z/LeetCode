@@ -63,12 +63,19 @@ def solveNQueens(n) :
                 temp_str = "".join(temp)
                 temp_res.append(temp_str)
             res.append(temp_res)
+            return
         for col in range(n):
-            if not isVaild(board, row, col):
-                continue
-            board[row][col] = 'Q'
-            backtracking(board, row+1, n)
-            board[row][col] = '.'
+            if isVaild(board, row, col):
+                board[row][col] = 'Q'
+                backtracking(board, row+1, n)
+                board[row][col] = '.'
+            else:
+                pass
+            # if not isVaild(board, row, col):
+            #     continue
+            # board[row][col] = 'Q'
+            # backtracking(board, row+1, n)
+            # board[row][col] = '.'
     backtracking(board, 0, n)
     return res
 
