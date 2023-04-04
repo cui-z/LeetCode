@@ -2,6 +2,8 @@
 
 #pop() 函数用于移除列表中的一个元素（默认最后一个元素），并且返回该元素的值。
 
+
+#这才是 回溯  不行就pop掉
 # def solve(n,k):
 #     result=[]
 #     def solve01(result,first=1,curr=[]):
